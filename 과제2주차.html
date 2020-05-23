@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다이빙센터</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        function q10() {
+
+            let value = $('input-q1').val();
+            if (Value == '') {
+                alert('이름을 입력하세요!');
+            } else {
+                alert('주문이 완료되었습니다')
+            }
+
+            let value = $('inputGroupSelect01').val();
+            if (Value == '') {
+                alert('수량을 입력하세요!');
+            } else {
+                alert('주문이 완료되었습니다')
+            }
+
+            let value = $('input-q3').val();
+            if (Value == '') {
+                alert('주소를 입력하세요!');
+            } else {
+                alert('주문이 완료되었습니다')
+            }
+
+            let value = $('input-q4').val();
+            if (Value == '') {
+                alert('전화번호를 입력하세요!');
+            } else {
+                alert('주문이 완료되었습니다')
+            }
+
+            fuction exchange() {
+                $.ajax({
+                    type: "GET",
+                    url: "https://api.manana.kr/exchange/rate.json",
+                    data: {},
+                    success: function (response) {
+                        for (let i = 0; i < response.length; i++) {
+                            resoponse[i]['namee'] == "USDKRW=X" {
+                                $('$exchangerate').text(resonse[i]['rate']);
+                            }
+                        }
+                    }
+                })
+            }
+
+
+        }
+
+
+        fuction request - list() {
+            let temp_html
+            <td> 이름    </td>
+                <td> 단체구분</td>
+                <td> 주소 </td>
+                <td> 전화번호 </td>
+
+        }
+
+
+
+        }
+    </script>
+
+    <STYLE>
+        * {
+            font-family: 'Gaegu', cursive;
+
+        }
+
+        .firstimage {
+            width: 450px;
+            height: 300px;
+
+            background-image: url('https://storage.googleapis.com/cr-resource/image/4712743e227ef24ee64b4809ed2d9367/daridivers96940/600/3801a78f5f8ccecfaed0773965e6d8fd.jpg');
+            background-position: center;
+            background-size: cover;
+
+            border-radius: 30px;
+        }
+
+
+        .wrap {
+            margin: 150px 0px 0px 150px;
+            width: 500px;
+
+        }
+
+        .wrap1 {
+            margin: 0px 150px 150px 150px;
+            width: 500px;
+
+        }
+
+        div.request-list {
+            margin: 0px 0px 0px 0px;
+        }
+
+        table {
+            border: 1px;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid;
+        }
+    </STYLE>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="firstimage">
+        </div>
+
+        <div class="discription">
+            <div>
+                Discover Scuba Diving : 단돈 10만원!!!
+            </div>
+            <h1>1일 한정이니 서두르세요!!</h1>
+        </div>
+        <p1 class="exchangeinfo"> 환율정보 : <span id="exchagerate"> </span> </p1>
+    </div>
+
+    <div class="wrap1">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">이름</span>
+            </div>
+            <input id="input-q1" type="text" class="form-control" placeholder="Username" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div>
+
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">단체구분</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01">
+                <option selected>Choose...</option>
+                <option value="1">1인</option>
+                <option value="2">2인</option>
+                <option value="3">10인 이상</option>
+            </select>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon2">주소</span>
+            </div>
+            <input id="input-q3" type="text" class="form-control" placeholder="" aria-label=""
+                aria-describedby="basic-addon2">
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">전화번호</span>
+            </div>
+            <input id="input-q4" type="text" class="form-control" placeholder="" aria-label=""
+                aria-describedby="basic-addon3">
+        </div>
+
+        <button onclick="q10()" type="button" class="btn btn-secondary btn-lg">주문하기</button>
+
+        <div class="request-list">
+            <table>
+                <thead>
+                    <tr>
+                        <td>이름</td>
+                        <td>단체구분</td>
+                        <td>주소</td>
+                        <td>전화번호</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+
+
+    </div>
+
+
+</body>
+
+</html>
